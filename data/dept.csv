@@ -1,0 +1,121 @@
+dept_id,dept_name,dept_pilot,store_id_dept,price_elasticity_group
+1,Electronics,True,1,Low
+2,Home & Kitchen,True,1,Medium
+3,Sports & Outdoors,True,1,High
+4,Clothing,False,1,Medium
+5,Books,False,1,Medium
+6,Toys,False,1,Medium
+1,Electronics,True,2,Low
+2,Home & Kitchen,True,2,Medium
+3,Sports & Outdoors,True,2,High
+4,Clothing,False,2,Medium
+5,Books,False,2,Medium
+6,Toys,False,2,Medium
+1,Electronics,True,3,Low
+2,Home & Kitchen,True,3,Medium
+3,Sports & Outdoors,True,3,High
+4,Clothing,False,3,Medium
+5,Books,False,3,Medium
+6,Toys,False,3,Medium
+1,Electronics,True,4,Low
+2,Home & Kitchen,True,4,Medium
+3,Sports & Outdoors,True,4,High
+4,Clothing,False,4,Medium
+5,Books,False,4,Medium
+6,Toys,False,4,Medium
+1,Electronics,True,5,Low
+2,Home & Kitchen,True,5,Medium
+3,Sports & Outdoors,True,5,High
+4,Clothing,False,5,Medium
+5,Books,False,5,Medium
+6,Toys,False,5,Medium
+1,Electronics,True,6,Low
+2,Home & Kitchen,True,6,Medium
+3,Sports & Outdoors,True,6,High
+4,Clothing,False,6,Medium
+5,Books,False,6,Medium
+6,Toys,False,6,Medium
+1,Electronics,True,7,Low
+2,Home & Kitchen,True,7,Medium
+3,Sports & Outdoors,True,7,High
+4,Clothing,False,7,Medium
+5,Books,False,7,Medium
+6,Toys,False,7,Medium
+1,Electronics,True,8,Low
+2,Home & Kitchen,True,8,Medium
+3,Sports & Outdoors,True,8,High
+4,Clothing,False,8,Medium
+5,Books,False,8,Medium
+6,Toys,False,8,Medium
+1,Electronics,True,9,Low
+2,Home & Kitchen,True,9,Medium
+3,Sports & Outdoors,True,9,High
+4,Clothing,False,9,Medium
+5,Books,False,9,Medium
+6,Toys,False,9,Medium
+1,Electronics,True,10,Low
+2,Home & Kitchen,True,10,Medium
+3,Sports & Outdoors,True,10,High
+4,Clothing,False,10,Medium
+5,Books,False,10,Medium
+6,Toys,False,10,Medium
+1,Electronics,True,11,Low
+2,Home & Kitchen,True,11,Medium
+3,Sports & Outdoors,True,11,High
+4,Clothing,False,11,Medium
+5,Books,False,11,Medium
+6,Toys,False,11,Medium
+1,Electronics,True,12,Low
+2,Home & Kitchen,True,12,Medium
+3,Sports & Outdoors,True,12,High
+4,Clothing,False,12,Medium
+5,Books,False,12,Medium
+6,Toys,False,12,Medium
+1,Electronics,True,13,Low
+2,Home & Kitchen,True,13,Medium
+3,Sports & Outdoors,True,13,High
+4,Clothing,False,13,Medium
+5,Books,False,13,Medium
+6,Toys,False,13,Medium
+1,Electronics,True,14,Low
+2,Home & Kitchen,True,14,Medium
+3,Sports & Outdoors,True,14,High
+4,Clothing,False,14,Medium
+5,Books,False,14,Medium
+6,Toys,False,14,Medium
+1,Electronics,True,15,Low
+2,Home & Kitchen,True,15,Medium
+3,Sports & Outdoors,True,15,High
+4,Clothing,False,15,Medium
+5,Books,False,15,Medium
+6,Toys,False,15,Medium
+1,Electronics,True,16,Low
+2,Home & Kitchen,True,16,Medium
+3,Sports & Outdoors,True,16,High
+4,Clothing,False,16,Medium
+5,Books,False,16,Medium
+6,Toys,False,16,Medium
+1,Electronics,True,17,Low
+2,Home & Kitchen,True,17,Medium
+3,Sports & Outdoors,True,17,High
+4,Clothing,False,17,Medium
+5,Books,False,17,Medium
+6,Toys,False,17,Medium
+1,Electronics,True,18,Low
+2,Home & Kitchen,True,18,Medium
+3,Sports & Outdoors,True,18,High
+4,Clothing,False,18,Medium
+5,Books,False,18,Medium
+6,Toys,False,18,Medium
+1,Electronics,True,19,Low
+2,Home & Kitchen,True,19,Medium
+3,Sports & Outdoors,True,19,High
+4,Clothing,False,19,Medium
+5,Books,False,19,Medium
+6,Toys,False,19,Medium
+1,Electronics,True,20,Low
+2,Home & Kitchen,True,20,Medium
+3,Sports & Outdoors,True,20,High
+4,Clothing,False,20,Medium
+5,Books,False,20,Medium
+6,Toys,False,20,Medium
