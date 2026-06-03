@@ -102,7 +102,7 @@ stores_df = pd.DataFrame({
 # generated row index so the CSV stays clean.
 stores_df.to_csv('data/stores.csv', index=False)
 
-print(f"✅ Stores table: {len(stores_df)} rows saved to data/stores.csv")
+# print(f"✅ Stores table: {len(stores_df)} rows saved to data/stores.csv")
 # print(stores_df)
 
 # -----------------------------------------------------------------------------------------------------------------
@@ -309,5 +309,5 @@ ground_truth = pd.DataFrame(
         'treatment_end':   ['2024-06-30'] * 3,
     }
 )
-
+ground_truth.to_csv('data/ground_truth.csv', index=False)
 print(ground_truth)

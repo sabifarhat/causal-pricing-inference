@@ -1,0 +1,4 @@
+dept_id,dept_name,true_att,elasticity_group,treatment_start,treatment_end
+1,Electronics,0.12,Low,2024-04-01,2024-06-30
+2,Home & Kitchen,0.03,Medium,2024-04-01,2024-06-30
+3,Sports & Outdoors,-0.02,High,2024-04-01,2024-06-30
