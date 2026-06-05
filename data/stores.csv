@@ -1,13 +1,13 @@
 store_id,store_name,city,store_size_sqft,weekly_footfall,is_pilot,store_format,matched_control_id,open_since
-1,Kitchener-Fairview,Kitchener,71422,6685,True,large,,2023-01-01
-2,Kitchener-Stanley Park,Kitchener,30795,20668,True,medium,,2023-01-01
-3,Kitchener-Downtown,Kitchener,15860,5769,True,small,,2023-01-01
-4,Waterloo-Uptown,Waterloo,53158,15583,True,large,,2023-01-01
-5,Waterloo-University,Waterloo,77570,18803,True,large,,2023-01-01
-6,Waterloo-Conestoga,Waterloo,69343,20773,True,large,,2023-01-01
-7,Cambridge-Hespeler,Cambridge,59732,11949,True,large,,2023-01-01
-8,Cambridge-Galt,Cambridge,26284,7433,True,small,,2023-01-01
-9,Online-Waterloo,Online,69886,10311,True,large,,2023-01-01
+1,Kitchener-Fairview,Kitchener,71422,6685,True,large,12,2023-01-01
+2,Kitchener-Stanley Park,Kitchener,30795,20668,True,medium,19,2023-01-01
+3,Kitchener-Downtown,Kitchener,15860,5769,True,small,10,2023-01-01
+4,Waterloo-Uptown,Waterloo,53158,15583,True,large,20,2023-01-01
+5,Waterloo-University,Waterloo,77570,18803,True,large,18,2023-01-01
+6,Waterloo-Conestoga,Waterloo,69343,20773,True,large,15,2023-01-01
+7,Cambridge-Hespeler,Cambridge,59732,11949,True,large,13,2023-01-01
+8,Cambridge-Galt,Cambridge,26284,7433,True,small,14,2023-01-01
+9,Online-Waterloo,Online,69886,10311,False,large,,2023-01-01
 10,Kitchener-Forest Hill,Kitchener,21265,10051,False,small,,2023-01-01
 11,Kitchener-Doon,Kitchener,31850,11420,False,medium,,2023-01-01
 12,Kitchener-Chicopee,Kitchener,77678,6184,False,large,,2023-01-01

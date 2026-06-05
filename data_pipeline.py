@@ -64,7 +64,7 @@ weekly_footfall = np.random.randint(5000, 21000, size=20)
 
 # Treatment flag: True for the 8 physical pilot stores AND store 9 (online, placeholder). Final online treatment status pending 
 # expert input — can be flipped with one line change.
-is_pilot = [True if sid <= 9 else False for sid in store_id]
+is_pilot = [True if sid <= 8 else False for sid in store_id]
 
 # Store format classification derived from size in square feet:
 #   Small  → under 30,000 sq ft  
@@ -259,6 +259,8 @@ daily_sales_df['revenue'] = (
     noise
 )
 
+daily_sales_df['revenue'] = daily_sales_df['revenue'].round(0)
+
 true_att = {1: 0.12, 2: 0.03, 3: -0.02}
 
 # For each treated row, multiply revenue by (1 + true_att)
@@ -310,4 +312,5 @@ ground_truth = pd.DataFrame(
     }
 )
 ground_truth.to_csv('data/ground_truth.csv', index=False)
-print(ground_truth)
+# print(ground_truth)
+print(daily_sales_df)
