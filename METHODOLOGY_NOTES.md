@@ -211,7 +211,84 @@ A/B test reporting at store level.
 
 ---
 
-## 7. CUPED vs BSTS — Why They Are Different
+## 7. Difference-in-Differences — Key Concepts
+
+### What DiD solves that A/B test cannot
+The A/B test compares pilot vs control ONLY during the pilot period. It cannot
+distinguish between:
+- Revenue lift caused by the price change
+- Revenue lift that would have happened anyway (seasonal trends, market growth)
+- Pre-existing differences between pilot and control stores
+
+DiD fixes this by comparing the CHANGE in pilot stores to the CHANGE in control
+stores over the same time period. The control group acts as a "what would have
+happened anyway" benchmark.
+
+### The 2x2 Table — Core Intuition
+
+| | Pre-pilot | During pilot | Change |
+|---|---|---|---|
+| Control stores | CAD 58,066 | CAD 57,622 | -444 |
+| Pilot stores | CAD 55,684 | CAD 61,755 | +6,071 |
+
+```
+DiD = Pilot change − Control change
+    = +6,071 − (−444)
+    = CAD 6,515
+```
+
+Control stores dropped CAD 444 naturally — no treatment applied.
+Pilot stores gained CAD 6,071 in total.
+Subtracting the natural drift isolates the true causal effect: CAD 6,515/week.
+
+### What each OLS regression coefficient means
+The DiD regression model: `revenue = b0 + b1(treated) + b2(post) + b3(did)`
+
+- **Intercept (b0 = 58,066):** Control stores, pre-pilot baseline — the reference point
+- **treated (b1 = -2,383):** Pre-existing gap — pilot stores were already CAD 2,383
+  lower than control stores BEFORE the pilot started. Unrelated to treatment.
+- **post (b2 = -444):** Natural time trend — control stores dropped CAD 444 between
+  periods with NO treatment. Affects all stores regardless of treatment.
+- **did (b3 = 6,515):** The causal effect — after removing the pre-existing gap and
+  natural trend, pilot stores gained CAD 6,515/week due to the price change.
+
+### Why DiD gives a larger estimate than the naive A/B test
+- Naive A/B difference: CAD 5,265 (p=0.1171)
+- DiD estimate: CAD 6,515 (p=0.0694)
+
+The A/B test was UNDERSTATING the effect. Pilot stores started from a lower
+baseline (CAD 2,383 gap). DiD accounts for this pre-existing gap and reveals
+the true causal effect is larger than the simple snapshot comparison showed.
+
+### Parallel trends assumption
+DiD only works if, without treatment, pilot and control stores would have followed
+the same revenue trend. This is validated two ways:
+1. **Visually** — Chart 2 in Notebook 01 shows lines moving together pre-pilot
+2. **Formally** — t-test on week-over-week growth rates in the pre-period.
+   p > 0.05 confirms no statistically significant difference in growth rates.
+
+---
+
+## 8. P-value Interpretation — When You Want High vs Low
+
+The p-value always means the same thing: "probability this difference happened
+by random chance." But whether you WANT a high or low p-value depends on the test.
+
+| Test | Desired p-value | Reason |
+|---|---|---|
+| A/A test | p > 0.05 | Want groups to be similar — confirms no spurious differences |
+| Parallel trends test | p > 0.05 | Want groups to trend similarly — validates DiD assumption |
+| A/B test | p < 0.05 | Want to confirm treatment caused a real effect |
+| DiD 'did' coefficient | p < 0.05 | Want to confirm treatment caused a real effect |
+
+**Key insight:** p < 0.05 means "this difference is too large to have happened by
+random chance." Whether that's good or bad depends entirely on what you're testing.
+For validation tests (A/A, parallel trends) you want no significant difference.
+For effect tests (A/B, DiD) you want a significant difference.
+
+---
+
+## 9. CUPED vs BSTS — Why They Are Different
 
 ### CUPED (Controlled experiment Using Pre-Experiment Data)
 - Uses pre-period data as a **covariate** to reduce variance in the outcome
@@ -237,7 +314,7 @@ Counterfactual (BSTS) = estimated alternate reality that never happened.
 
 ---
 
-## 8. Causal Inference Methods — Learning Map
+## 10. Causal Inference Methods — Learning Map
 
 Topics covered in this project:
 - SUTVA — applied (Store 9 exclusion)
