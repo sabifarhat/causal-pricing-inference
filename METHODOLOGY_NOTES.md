@@ -314,6 +314,66 @@ Counterfactual (BSTS) = estimated alternate reality that never happened.
 
 ---
 
+## 11. DiD — Layman Explanation and Key Intuition
+
+### How to explain DiD to anyone in plain English
+
+"Imagine you change prices in 8 stores in April. By June your revenue went up
+by CAD 6,071. But maybe revenue would have gone up anyway — busy season,
+customers spending more everywhere.
+
+So you look at 11 similar stores that did NOT change prices. Their revenue
+dropped by CAD 444 over the same period.
+
+Now you can separate what's yours from what's the market:
+Your stores gained 6,071. But the market says things should have dropped 444.
+So your price change actually caused a gain of 6,071 + 444 = CAD 6,515.
+
+That extra CAD 6,515 — the part that can't be explained by market trends —
+that's the true impact of your pricing decision. That's DiD."
+
+### The swimming upstream analogy
+The market was pulling revenue DOWN by 444. Your stores fought against that
+pull AND still came out ahead by 6,071. Your price change had to:
+1. Overcome the natural -444 drop
+2. AND deliver the +6,071 gain
+True effect = 6,071 + 444 = 6,515
+
+### What if the market went UP instead?
+If control stores gained +444, some of your 6,071 was just free market
+tailwind — not your pricing decision.
+DiD = 6,071 - 444 = 5,627 (only this much was truly caused by price change)
+
+### The rule — always the same formula
+DiD = Pilot change - Control change
+
+- Control went DOWN (-444) → subtracting a negative → ADD → effect is larger
+- Control went UP (+444)   → subtracting a positive → SUBTRACT → effect is smaller
+
+The formula never changes. Direction of market movement determines whether
+your true effect is larger or smaller than the raw observed change.
+
+### Why 'treated' coefficient reflects only the pre-period gap
+When treated=1 and post=0 → pilot stores in PRE-period only.
+When treated=1 AND post=1 → that row belongs to 'did', not 'treated'.
+So OLS naturally isolates 'treated' as the structural gap in the pre-period.
+
+The four regression combinations map perfectly to the 2x2 DiD table:
+- treated=0, post=0 → Control, pre-period    → Intercept
+- treated=1, post=0 → Pilot, pre-period      → Intercept + treated
+- treated=0, post=1 → Control, post-period   → Intercept + post
+- treated=1, post=1 → Pilot, post-period     → Intercept + treated + post + did
+
+### Connection to regression — why 'did' = DiD formula
+DiD = (Pilot change) - (Control change)
+    = (post + did) - (post)
+    = did
+
+The 'post' terms cancel out automatically — the regression implements the
+DiD formula exactly. Manual calculation and OLS regression give identical answers.
+
+---
+
 ## 10. Causal Inference Methods — Learning Map
 
 Topics covered in this project:
